@@ -19,11 +19,11 @@ public class App {
 
 		String nomePersonagem;
 		int controleA = 1;
-
+		
 		boolean teste1;
 
 		while (controleA == 1) {
-
+			Scanner scanW = new Scanner(System.in);
 			System.out.println("");
 			System.out.println("Didite 1 para verificar se o personagem ja esta cadastrado");
 			System.out.println("Digite 2 para imprimir a lista");
@@ -38,7 +38,7 @@ public class App {
 			if (verifica == 1) {
 
 				System.out.println("Digite um personagem Marvel");
-				nomePersonagem = scan.next();
+				nomePersonagem = scanW.nextLine();
 				teste1 = listaDePersonagens.contains(nomePersonagem);
 
 				if (teste1 == true) {
@@ -71,7 +71,7 @@ public class App {
 				if (teste3 == false) {
 
 					System.out.println("Digite o personagem a ser alterado");
-					String excluir = scan.next();
+					String excluir = scanW.nextLine();
 
 					boolean teste2 = listaDePersonagens.contains(excluir);
 
@@ -79,7 +79,7 @@ public class App {
 
 						System.out.println("");
 						System.out.println("Por qual personagem:");
-						String add = scan.next();
+						String add = scanW.nextLine();
 
 						listaDePersonagens.remove(excluir);
 						listaDePersonagens.add(add);
@@ -103,7 +103,7 @@ public class App {
 				if (teste3 == false) {
 
 					System.out.println("Digite o personagem a ser excluido da lista");
-					String excluir = scan.next();
+					String excluir = scanW.nextLine();
 
 					boolean teste2 = listaDePersonagens.contains(excluir);
 
@@ -128,7 +128,7 @@ public class App {
 				while (condicao == 1) {
 
 					System.out.println("Digite o nome do personagem: ");
-					nomePersonagem = scan.next();
+					nomePersonagem = scanW.nextLine();
 
 					boolean teste2 = listaDePersonagens.contains(nomePersonagem);
 
